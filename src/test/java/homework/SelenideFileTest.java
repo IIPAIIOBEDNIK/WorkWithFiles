@@ -55,7 +55,7 @@ public class SelenideFileTest {
     @Test
     void readExcelTest() throws Exception {
         String excelFile = "sample3.xlsx";
-        String contentsExcel = "Ivanov";
+        String contentsExcel = "Pereponov";
         try (InputStream stream = getClass().getClassLoader().getResourceAsStream(excelFile)) {
             XLS parsed = new XLS(stream);
             assertThat(parsed.excel.getSheetAt(1).getRow(1).getCell(0).getStringCellValue())
